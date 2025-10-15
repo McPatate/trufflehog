@@ -7,10 +7,11 @@
 package detectorspb
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -1090,6 +1091,7 @@ const (
 	DetectorType_Groq                                    DetectorType = 988
 	DetectorType_TwitterConsumerkey                      DetectorType = 989
 	DetectorType_Eraser                                  DetectorType = 990
+	DetectorType_OpenRouter                              DetectorType = 991
 )
 
 // Enum value maps for DetectorType.
@@ -2082,6 +2084,7 @@ var (
 		988: "Groq",
 		989: "TwitterConsumerkey",
 		990: "Eraser",
+		991: "OpenRouter",
 	}
 	DetectorType_value = map[string]int32{
 		"Alibaba":                               0,
@@ -3071,6 +3074,7 @@ var (
 		"Groq":                             988,
 		"TwitterConsumerkey":               989,
 		"Eraser":                           990,
+		"OpenRouter":                       991,
 	}
 )
 
@@ -4555,18 +4559,21 @@ func file_detectors_proto_rawDescGZIP() []byte {
 	return file_detectors_proto_rawDescData
 }
 
-var file_detectors_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_detectors_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
-var file_detectors_proto_goTypes = []interface{}{
-	(DecoderType)(0),          // 0: detectors.DecoderType
-	(DetectorType)(0),         // 1: detectors.DetectorType
-	(*Result)(nil),            // 2: detectors.Result
-	(*FalsePositiveInfo)(nil), // 3: detectors.FalsePositiveInfo
-	(*StructuredData)(nil),    // 4: detectors.StructuredData
-	(*TlsPrivateKey)(nil),     // 5: detectors.TlsPrivateKey
-	(*GitHubSSHKey)(nil),      // 6: detectors.GitHubSSHKey
-	nil,                       // 7: detectors.Result.ExtraDataEntry
-}
+var (
+	file_detectors_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
+	file_detectors_proto_msgTypes  = make([]protoimpl.MessageInfo, 6)
+	file_detectors_proto_goTypes   = []interface{}{
+		(DecoderType)(0),          // 0: detectors.DecoderType
+		(DetectorType)(0),         // 1: detectors.DetectorType
+		(*Result)(nil),            // 2: detectors.Result
+		(*FalsePositiveInfo)(nil), // 3: detectors.FalsePositiveInfo
+		(*StructuredData)(nil),    // 4: detectors.StructuredData
+		(*TlsPrivateKey)(nil),     // 5: detectors.TlsPrivateKey
+		(*GitHubSSHKey)(nil),      // 6: detectors.GitHubSSHKey
+		nil,                       // 7: detectors.Result.ExtraDataEntry
+	}
+)
+
 var file_detectors_proto_depIdxs = []int32{
 	7, // 0: detectors.Result.extra_data:type_name -> detectors.Result.ExtraDataEntry
 	4, // 1: detectors.Result.structured_data:type_name -> detectors.StructuredData

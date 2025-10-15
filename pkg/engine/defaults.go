@@ -477,6 +477,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/oopspam"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openai"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/opencagedata"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openrouter"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openuv"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openvpn"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openweather"
@@ -1221,6 +1222,7 @@ func DefaultDetectors() []detectors.Detector {
 		streak.Scanner{},
 		route4me.Scanner{},
 		openai.Scanner{},
+		openrouter.Scanner{},
 		opencagedata.Scanner{},
 		positionstack.Scanner{},
 		upcdatabase.Scanner{},
